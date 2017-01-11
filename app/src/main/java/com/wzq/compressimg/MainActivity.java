@@ -45,10 +45,10 @@ public class MainActivity extends AppCompatActivity {
                     if (!dirFile.exists()) {
                         dirFile.mkdirs();
                     }
-                    File originalFile = new File(dirFile, "original.jpg");
-                    FileOutputStream fileOutputStream = new FileOutputStream(
-                            originalFile);
-                    bit.compress(Bitmap.CompressFormat.JPEG, quality, fileOutputStream);
+                   // File originalFile = new File(dirFile, "original.jpg");
+                  //  FileOutputStream fileOutputStream = new FileOutputStream(
+                  //          originalFile);
+                   // bit.compress(Bitmap.CompressFormat.JPEG, quality, fileOutputStream);
                     final File jpegTrueFile = new File(dirFile, "jpegtrue.jpg");
                     File jpegFalseFile = new File(dirFile, "jpegfalse.jpg");
                     NativeUtil.compressBitmap(bit, quality,
