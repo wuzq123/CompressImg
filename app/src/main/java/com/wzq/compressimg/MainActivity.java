@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                             jpegTrueFile.getAbsolutePath(), true);
                     NativeUtil.compressBitmap(bit, quality,
                             jpegFalseFile.getAbsolutePath(), false);
+                    if(bit != null && !bit.isRecycled())
+                        bit.recycle();
                     runOnUiThread(new Runnable() {
 
                         @Override
